@@ -1,198 +1,35 @@
-.pregled_Odgovora {
-    border: 1px black solid;
-    height: 19px;
-    display: flex;
-    flex-direction: row;
-    width: 800px;
-
-}
-
-
-#polje {
-
-
-    height: 299px;
-    width: 200px
-}
-
-.table-responsive {
-    width: 1000px;
-}
-
-.mini {
-    display: flex;
-    margin-top: 30px;
-    border: 1px black solid;
-
-    width: 800px;
-}
-
-.odgovori_igraca {
-    margin-left: 5px;
-    height: 30px;
-    border: 0.5px rgb(160, 155, 155) solid;
-
-}
-
-.dugme_ready {
-    margin-top: 10px;
-    border-radius: 2rem;
-}
-
-.dugme_prijava_za_igru {
-
-    width: 200px;
-    height: 20px;
-    border-radius: 20px;
-}
-
-.div_username2 {
+body {
     display: flex;
     flex-direction: column;
-
-    width: 150px;
-    border: 1px black solid;
-}
-
-.mini_kontejner {
-    margin-top: 300px;
-    flex-direction: row;
-    display: flex;
-
-    height: 800px;
-    width: 300px;
-    background-color: rgb(33, 168, 231);
-}
-
-.desni_kontejner {
-    margin-left: 50px;
-    height: 350px;
-    width: 600px;
-
-}
-
-.start {
-    height: 25px;
-    width: 70px;
-    border-radius: 2rem;
-}
-
-.donji_kontejner {
-
-
-    margin: 1%;
-    height: 450px;
-    width: 805px;
-    display: flex;
-    flex-direction: column;
-
-
-
-}
-
-.unos {
-    height: 20px;
-    width: 50px;
-    margin-left: 100px;
-}
-
-.dugme_start {
-    height: 25px;
-    width: 70px;
-    border-radius: 2rem;
-}
-
-.join {
-
-    height: 30px;
-    width: 70px;
-    border-radius: 2rem;
-
-}
-
-.labela_status {
-    margin-top: 200px;
-    margin-left: 300px;
-}
-
-.spanP {
-    margin-left: 150px;
-
-}
-
-.div_za_poene {
-    border: 1px black solid;
-    height: 20px;
-    align-items: baseline;
-}
-
-.div_poeni {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-
-    width: 60;
-    border: 1px black solid;
-}
-
-.div_podaci {
-    border: 1px black solid;
-    height: 20px;
-    align-items: baseline;
-
-}
-
-.div_tabelica {
-    display: flex;
-    flex-direction: row;
-    margin-left: 500px;
-    height: 290px;
-    width: 600px;
+    /* justify-content: center; */
     align-items: center;
 }
 
-.labela_poeni {
-    margin-left: 150px;
+.hidden {
+    visibility: hidden;
 }
 
-.div_red {
-
+.form-wrapper {
     display: flex;
-    flex-direction: row;
-    border: 1px black solid;
-    height: 15px;
+    /* width: 100%;
+    margin-left: 40%;
+    margin-bottom: 10%; */
 }
 
-
-.div_forma_join {
-    margin-top: 150px;
-    border: 1px black solid;
-    height: 210px;
-    display: flex;
-    width: 300px;
-    align-items: center;
+.row {
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
-.kontejner {
-    margin-left: 500px;
-    border: 1px black solid;
-    height: 460px;
-    width: 500px;
-    margin-top: 10px;
+.page-holder {
+    min-height: 100vh;
 }
 
-
-.red1 {
-    margin-left: 1px;
-
+.bg-cover {
+    background-size: cover !important;
+    width: 100%;
 }
 
-.input {
-    margin-left: 10px;
-
-}
-
-.div {
-    border: 1px black solid;
-    height: 19px;
+#info {
+    font-size: large;
 }

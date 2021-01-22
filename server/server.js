@@ -54,58 +54,30 @@ io.on('connection', (sock) => {
 
 const submitAnswersS = (answers, username, key) => {
     const game = games.get(key)
+    console.log('username', username)
+    console.log('key', key)
+    console.log('answers', answers)
     if (!game) return; //io.emit(`noexist:${key}`,`game ${key} doesnt exist` );
     else {
+        console.log('answers', answers)
         game.submitAnswers(username, answers);
         // io.emit(`answersSubmited:${key}`,)
-        sock.emit('answersSubmited')
+        //sock.emit('answersSubmited')
     }
 }
 
 const startRoundP = async (username, key) => {
-    console.log('started !')
+    console.log('startRoundP')
     const game = games.get(key)
     if (!game) return; //io.emit(`noexist:${key}`,`game ${key} doesnt exist` );
     else {
-        console.log('started2')
         if (!game.isAdmin(username)) return;
-        io.emit(`gameStart:${key}`, { time: game.G })
-        const res = await game.startRound()
-        await console.log('counting down!')
-        await io.emit(`results:${key}`, {
-            results: res
-        })
-    }
-}
-const joinRoundP = (username, key) => {
-    console.log('joined')
-    console.log('key', key)
-    let game = games.get(key)
-    console.log('game', game)
-    if (!game) io.emit(`noexist:${key}`, `game ${key} doesnt exist`);
-    else {
-        game.addPlayer(username)
-        io.emit(`playerJoined:${key}`, {
-            players: game.getPlayers(),
-            numPlayers: game.getNumPlayers(),
-            letter: 1
-        })
-    }
-}
-const createRoundP = async (username, numPlayers, time, k) => {
-    //const slovo=Math.floor(Math.random()*30+1)
-    let key = k
-    if (games.has(key))
-        joinRoundP(username, key)
-    else {
-        console.log('username', username)
-        console.log('numPlayers', numPlayers)
-        console.log('time', time)
-        const slovo = 1;
+        console.log('game.getTime()', game.getTime())
+        io.emit(`gameStart:${key}`, { time: game.getTime(), letter: game.getLetter() })
         const niz = ['drzave', 'gradovi', 'jezera', 'planine', 'reke', 'zivotinje', 'biljke', 'mora', 'predmeti']
         let answers = []
         for (field of niz) {
-            await lrangeAsync(`${field}:${slovo}`, 0, -1)
+            await lrangeAsync(`${field}:${game.getLetter()}`, 0, -1)
                 .then(data => {
                     if (data) {
                         answers.push(data)
@@ -114,13 +86,44 @@ const createRoundP = async (username, numPlayers, time, k) => {
                     throw err
                 })
         }
+        const res = await game.startRound(answers)
+        await console.log('counting down!')
+        console.log('res', res)
+        await io.emit(`results:${key}`, {
+            results: res,
+        })
+    }
+}
+const joinRoundP = (username, key) => {
+    let game = games.get(key)
+    if (!game) io.emit(`noexist:${key}`, `game ${key} doesnt exist`);
+    else {
+        game.addPlayer(username)
+        io.emit(`playerJoined:${key}`, {
+            players: game.getPlayers(),
+            numPlayers: game.getNumPlayers(),
+            letter: game.getLetter()
+        })
+    }
+}
+const createRoundP = async (username, numPlayers, time, k) => {
+    if (!username || !numPlayers || !time || !k) return;
+    let key = k
+    if (games.has(key))
+        joinRoundP(username, key)
+    else {
+        console.log('username', username)
+        console.log('numPlayers', numPlayers)
+        console.log('time', time)
+        const slovo = Math.floor(Math.random() * 30 + 1)
 
-        console.log('answers', answers)
 
-        const c = createRound(time, answers, numPlayers)
+
+        //console.log('answers', answers)
+
+        const c = createRound(time, numPlayers, slovo)
         c.addAdmin(username)
         games.set(key, c)
-        console.log('games.get(key)', games.get(key))
         io.emit(`playerJoined:${key}`, {
             players: c.getPlayers(),
             numPlayers: c.getNumPlayers(),
@@ -129,11 +132,7 @@ const createRoundP = async (username, numPlayers, time, k) => {
     }
 
 }
-const saveAnswersPlayer = (player) => {
-    console.log('player', player)
-    //  c.addPlayer(player.name);
 
-}
 server.listen(8080, () => {
     console.log("server is ready")
 })

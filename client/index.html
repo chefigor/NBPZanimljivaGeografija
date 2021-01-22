@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 
 <html>
-<header>
+
+<head>
 
     <title> Nacionalna Geografija </title>
     <meta charset="UTF-8">
@@ -12,27 +13,115 @@
 
     </link>
 
-</header>
+</head>
 
 <body>
-    <div class="table-responsive">
-        <table class="table table-dark table-stripped table-hover table-responsive">
-            <thead>
-                <tr>
-                    <th>Username</th>
-                    <th>Drzava</th>
-                    <th>Grad</th>
-                    <th>Jezero</th>
-                    <th>Planina</th>
-                    <th>Zivotinja</th>
-                    <th>Biljka</th>
-                    <th>Mora</th>
-                    <th>Predmet</th>
-                    <th>Points</th>
-                </tr>
-            </thead>
-            <tbody id="res"></tbody>
-        </table>
+    <div style="background: url(https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)"
+        class="page-holder bg-cover">
+        <div class="container">
+            <div id="table" class="table-responsive hidden">
+                <table class="table table-bordered table-dark table-stripped table-hover table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Drzava</th>
+                            <th>Grad</th>
+                            <th>Jezero</th>
+                            <th>Planina</th>
+                            <th>Reka</th>
+                            <th>Zivotinja</th>
+                            <th>Biljka</th>
+                            <th>Mora</th>
+                            <th>Predmet</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody id="res"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="form-wrapper container text-white container">
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <label for="username-create">Username</label>
+                    <input type="text" class="form-control" id="username-create" placeholder="Username">
+                </div>
+                <div class="form-group col-md-8">
+                    <label for="time-create">Time[in seconds]</label>
+                    <input type="number" class="form-control" id="time-create" placeholder="60">
+                </div>
+                <div class="form-group col-md-8">
+                    <label for="numPlayers-create">Number of players</label>
+                    <input type="number" class="form-control" id="numPlayers-create" placeholder="4">
+                </div>
+                <div class="form-group col-md-8">
+                    <label for="code-create">Code</label>
+                    <input type="number" class="form-control" id="code-create" placeholder="Code">
+                </div>
+                <div class="form-group col-md-8">
+                    <button class="btn btn-primary" id="btn-create">Create</button>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <label for="username-join">Username</label>
+                    <input type="text" class="form-control" id="username-join" placeholder="Username">
+                </div>
+                <div class="form-group col-md-8">
+                    <label for="code-join">Code</label>
+                    <input type="number" class="form-control" id="code-join" placeholder="Code">
+                </div>
+                <div class="form-group col-md-8">
+                    <button class="btn btn-primary" id="btn-join">Join</button>
+                </div>
+            </div>
+        </div>
+        <div id="input-container" class="container hidden">
+            <div class="row ">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Drzava" id="drzava">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Grad" id="grad">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Jezero" id="jezero">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Planina" id="planina">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Reka" id="reka">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Zivotinja" id="zivotinja">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Biljka" id="biljka">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="More" id="more">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Predmet" id="predmet">
+                </div>
+                <div class="col">
+                    <button class="btn btn-primary" id="btn-submit" disabled>Prosledi</button>
+                </div>
+            </div>
+        </div>
+        <div class="container text-white">
+            <div class="row">
+                <button id="button-start" class="hidden col-1 btn btn-primary">Start
+                </button>
+                <div id="info" class="col text-center">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center"> <span id="time"></span>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
