@@ -46,10 +46,13 @@
     height: 20px;
     border-radius: 20px;
 }
-.div_username
+.div_username2
 {
-    margin-top: 50px;
-    align-items: center;
+    display:flex;
+    flex-direction: column;
+ 
+    width:150px;
+    border: 1px black solid;
 }
 
 .mini_kontejner
@@ -57,27 +60,36 @@
     margin-top: 300px;
     flex-direction: row;
     display: flex;
-    
-    height: 350px;
+    height: 800px;
     width: 300px;
     background-color: rgb(33, 168, 231);
 }
 
 .desni_kontejner 
 {
-  height: 350px;
-   width: 300px;
+    margin-left: 50px;
+    height: 350px;
+   width: 600px;
+   
 }
+
+.start 
+{
+    height: 25px;
+    width: 70px;
+    border-radius: 2rem;
+}
+
 .donji_kontejner
 { 
     
-    display: flex;
+
     margin:1%;
-    height: 300px;
+    height: 450px;
     width: 805px;
     display: flex;
     flex-direction: column;
-    height: 290px;
+   
   
    
 }
@@ -97,7 +109,7 @@
 .join 
 {
 
-    height: 50px;
+    height: 30px;
     width: 70px;
     border-radius: 2rem;
     
@@ -108,9 +120,45 @@
     margin-left: 300px;
 }
 
+.spanP
+{
+margin-left: 150px;
+
+}
+.div_za_poene
+{
+    border: 1px black solid;
+    height: 20px;
+    align-items: baseline;
+}
+.div_poeni
+{
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+  
+    width:60;
+    border: 1px black solid;
+}
+.div_podaci
+{
+    border: 1px black solid;
+    height: 20px;
+    align-items: baseline;
+
+}
+.div_tabelica
+{
+    display: flex;
+    flex-direction: row;
+    margin-left: 500px;
+    height: 290px;
+    width: 600px;
+    align-items: center;
+}
 .labela_poeni
 {
-    margin-left: 15px;
+    margin-left: 150px;
 }
 .div_red
 {
@@ -120,33 +168,24 @@
     border: 1px black solid;
     height: 15px;
 }
-.div_statistika
-{
-    display: flex;
-    flex-direction: column;
-     margin-left: 500px;
-   
-    border: 1px black solid;
-    height: 150px;
-    width: 600px;
-   
-}
+
+
 
 .div_forma_join
 {
     margin-top: 150px;
     border: 1px black solid;
-    height: 200px;
+    height: 210px;
     display: flex;
     width: 300px;
     align-items: center;
 }
 .kontejner 
 {
-    
+    margin-left: 500px;
     border: 1px black solid;
-    height:440px;
-    width: 400px;
+    height:460px;
+    width: 500px;
     margin-top: 10px;
 }
 

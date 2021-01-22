@@ -1,3 +1,6 @@
+import {Igrica } from "./igrica.js"
+
+
 export class Igraci {
 
     constructor(socket, username, status, poeni, timer) {
@@ -11,7 +14,9 @@ export class Igraci {
         this.slova = ["a", "b", "c", "č", "ć", "d", "dž", "đ"];
         this.numPlayers;
         this.key;
+        this.igrica = new Igrica();
     }
+
 
 
     dodajIgrica(igraci, num) {
@@ -23,7 +28,7 @@ export class Igraci {
 
     obrisiTabelu() {
 
-        const d = document.querySelector('.div_statistika').innerHTML = ""
+        const d = document.querySelector('.desni_kontejner').innerHTML = ""
     }
 
 
@@ -89,10 +94,15 @@ export class Igraci {
         const input_username = document.createElement("input");
         input_username.type = "text";
         input_username.className = "username";
+        input_username.minLength = 10;
         input_username.value = this.username;
         input_username.disabled = false;
-        donji_kontejner.appendChild(input_username);
 
+       
+        donji_kontejner.appendChild(input_username);
+        
+
+    
 
         dugme_prijava_za_igru.style.display = "none";
 
@@ -155,11 +165,26 @@ export class Igraci {
         donji_kontejner.appendChild(dugme_ready);
 
 
+        const div_join_ready = document.createElement("div");
+        div_join_ready.className = "div_join_ready";
+
         const join = document.createElement("button");
         join.className = "join";
         join.innerHTML = "Join";
 
-        donji_kontejner.appendChild(join);
+        const start = document.createElement("button");
+        start.className = "start";
+        start.innerHTML = "start";
+
+        start.disabled = "true";
+
+        div_join_ready.appendChild(start)
+        div_join_ready.appendChild(join);
+
+
+
+
+        donji_kontejner.appendChild(div_join_ready);
 
 
         join.onclick = (e) => {
@@ -188,7 +213,7 @@ export class Igraci {
             input_za_sifru.disabled = true;
             broj_igraca.disabled = true;
             dugme_ready.disabled = true;
-
+            start.disabled = true;
             dugme_joinaj.onclick = (e) => {
                 this.key = unos_sifre.value
                 this.sock.emit('join', {
@@ -234,9 +259,22 @@ export class Igraci {
             dugme_ready.disabled = true;
             input_za_sifru.disabled = true;
             join.disabled = true;
-        }
-    }
+            start.disabled=false;
 
+
+            
+                start.disabled = false;
+                start.onclick = (e) => {
+
+                    this.igrica.crtaj(this.mini_kontejner)
+                       
+                    }
+                }
+            
+        
+
+        
+}
 
 
     prikaziSlovo(letter) {
@@ -247,47 +285,50 @@ export class Igraci {
     }
     Kreiraj_Tablicu() {
 
-
-        const desni_kontejner = document.querySelector(".desni_kontejner");
-
-        const div_statistika = document.createElement("div");
-        div_statistika.className = "div_statistika";
-        div_statistika.style.opacity = 0;
-
-        desni_kontejner.appendChild(div_statistika);
-        this.status += 1;
-
-        var q = this.mini_kontejner.querySelector(".div_statistika");
-
-        q.style.opacity = 1;
-
-        const div_statistika2 = document.createElement("div");
-
-        div_statistika2.className = "div_statistika2";
-        q.appendChild(div_statistika2);
-
-        const div_red = document.createElement("div_red");
-        div_red.className = "div_red";
-
-        const username = document.createElement("label");
-        username.innerHTML = "Username: ";
-        username.className = "labela_user";
+        var q = document.querySelector(".desni_kontejner");
 
 
-        const poeni = document.createElement("div");
-        poeni.className = "labela_poeni";
-        poeni.innerHTML = "Poeni";
+        const div_tabelica = document.createElement("div");
+        div_tabelica.className = "div_tabelica";
 
-        div_red.appendChild(username);
-        div_red.appendChild(poeni);
+        const labela_status = document.createElement("label");
+        labela_status.innerHTML =  this.nizIgrica.length + "/" + this.numPlayers;
+        
+        div_tabelica.appendChild(labela_status);
 
 
-        if (this.key) {
-            const key = document.createElement('div');
+        const div_username2 = document.createElement("div");
+        div_username2.className = "div_username2";
+        
+        const labela_user = document.createElement("label");
+        labela_user.innerHTML = "Username";
+
+        const labela_poeni = document.createElement("label");
+        labela_poeni.innerHTML = "Poeni";
+
+       
+        div_username2.appendChild(labela_user);
+
+        
+        
+        
+        div_tabelica.appendChild(div_username2);
+       
+
+        const div_poeni = document.createElement("div");
+        div_poeni.className = "div_poeni";
+        div_poeni.appendChild(labela_poeni);
+        
+        div_tabelica.appendChild(div_poeni);
+
+
+
+         if (this.key) {
+           const key = document.createElement('div');
             key.classList = "labela_key"
             key.innerText = this.key;
-            div_red.appendChild(key);
-        }
+            div_podaci.appendChild(key);
+         }
 
 
 
@@ -299,6 +340,10 @@ export class Igraci {
             const div_podaci = document.createElement("div");
             div_podaci.className = "div_podaci";
 
+            const div_za_poene = document.createElement("div");
+            div_za_poene.className = "div_za_poene";
+
+         
 
 
             const labela_user = document.createElement("label");
@@ -309,37 +354,34 @@ export class Igraci {
             labela_poeni.innerHTML = el.points;
             labela_poeni.className = "labela_poeni";
 
+            div_za_poene.appendChild(labela_poeni);
+
             const labela_status = document.createElement("label");
             labela_status.className = "labela_status";
 
-            labela_status.innerHTML = this.nizIgrica.length + "/" + this.numPlayers;
+
+           
+           // labela_status.innerHTML = this.nizIgrica.length + "/" + this.numPlayers;
 
 
-            const dugme_start = document.createElement("button");
-            dugme_start.className = "dugme_start";
-            dugme_start.innerHTML = "Start";
+            // const dugme_start = document.createElement("button");
+            // dugme_start.className = "dugme_start";
+            // dugme_start.innerHTML = "Start";
 
             //this.proslediVreme();
 
-            div_podaci.appendChild(labela_poeni);
-            div_podaci.appendChild(labela_status);
-            div_podaci.appendChild(dugme_start);
-            q.appendChild(div_red);
-            q.appendChild(div_podaci);
+            div_username2.appendChild(div_podaci);
 
-            if (this.status != br_Igraca) {
-                dugme_start.disabled = true;
-            } else {
-                dugme_start.disabled = false;
-                dugme_start.onclick = (e) => {
+            div_poeni.appendChild(div_za_poene);
+           // div_podaci.appendChild(labela_status);
 
-                    this.nizIgrica.forEach(element => {
+           div_tabelica.appendChild(div_username2);
+           div_tabelica.appendChild(div_poeni);
+          //  div_podaci.appendChild(dugme_start);
+           q.appendChild(div_tabelica);
+            
 
-                        element.crtaj(this.mini_kontejner);
-                        dugme_start.disabled = true;
-                    })
-                }
-            }
+           
         }
 
 
