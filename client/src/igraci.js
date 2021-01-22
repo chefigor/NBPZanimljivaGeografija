@@ -1,3 +1,4 @@
+
 export class Igraci {
 
     constructor(socket, username, status, poeni, timer) {
@@ -216,7 +217,7 @@ export class Igraci {
             this.sock.emit('create', {
                 username: input_username.value,
                 numPlayers: broj_igraca.value,
-                time: input_vreme,
+                time: input_vreme.value,
                 key: input_za_sifru.value
             })
             this.sock.on(`playerJoined:${this.key}`, ({
@@ -228,12 +229,38 @@ export class Igraci {
                 this.dodajIgrica(players, numPlayers);
                 this.prikaziSlovo(letter)
             })
+
+            this.sock.on(`results:${this.key}`, ({ results }) => {
+                const tableBody = document.getElementById('#')
+                for (player in results) {
+                    const row = document.createElement('tr')
+                    const name = document.createElement('td')
+                    name.innerHTML = player.name;
+                    row.appendChild(name)
+                    for (ans in player.answers) {
+                        const td = document.createElement('td')
+                        td.innerHTML = ans;
+                        row.appendChild = ans;
+                    }
+                    const points = document.createElement('td')
+                    points.innerHTML = player.points
+                    row.appendChild(points)
+                }
+            })
             input_username.disabled = true;
             input_vreme.disabled = true;
             broj_igraca.disabled = true;
             dugme_ready.disabled = true;
             input_za_sifru.disabled = true;
             join.disabled = true;
+        }
+        const dugme_start = document.createElement("button");
+        dugme_start.className = "dugme_start";
+        dugme_start.innerHTML = "Start";
+        donji_kontejner.appendChild(dugme_start);
+
+        dugme_start.onclick = () => {
+            this.sock.emit('start', { username: input_username.value, key: this.key })
         }
     }
 
@@ -315,31 +342,15 @@ export class Igraci {
             labela_status.innerHTML = this.nizIgrica.length + "/" + this.numPlayers;
 
 
-            const dugme_start = document.createElement("button");
-            dugme_start.className = "dugme_start";
-            dugme_start.innerHTML = "Start";
 
             //this.proslediVreme();
 
             div_podaci.appendChild(labela_poeni);
             div_podaci.appendChild(labela_status);
-            div_podaci.appendChild(dugme_start);
             q.appendChild(div_red);
             q.appendChild(div_podaci);
 
-            if (this.status != br_Igraca) {
-                dugme_start.disabled = true;
-            } else {
-                dugme_start.disabled = false;
-                dugme_start.onclick = (e) => {
 
-                    this.nizIgrica.forEach(element => {
-
-                        element.crtaj(this.mini_kontejner);
-                        dugme_start.disabled = true;
-                    })
-                }
-            }
         }
 
 

@@ -9,19 +9,13 @@ import {
 } from "./igraci.js";
 
 
+
 (() => {
     const sock = io();
 
-    const o = new Odgovori("", "", "", "");
-    o.crtaj(document.body);
 
-//    const igrica = new Igrica("", 60);
-    const igrac = new Igraci(sock);
-    igrac.crtaj(document.body);
-
-    // igrica.dodajOdgovore(o);
-    // igrica.dodajIgrace(igrac);
-    // igrac.dodajIgrica(igrica);
+    const igraci = new Igraci(sock);
+    igraci.crtaj(document.body);
 
 
 })()

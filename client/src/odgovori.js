@@ -1,5 +1,6 @@
 export class Odgovori {
-    constructor(drzava, gradovi, jezera, planine, reke, zivotinje, biljke, mora, predmeti) {
+    constructor(username, drzava, gradovi, jezera, planine, reke, zivotinje, biljke, mora, predmeti) {
+        this.username = username;
         this.drzava = drzava;
         this.gradovi = gradovi;
         this.jezera = jezera;
@@ -12,9 +13,8 @@ export class Odgovori {
         this.mini_kontejner = null;
     }
 
-    Niz = new Array();
     brojac = 0;
-    Niz = ["username","drzava", "gradovi", "jezera", "planine", "reke", "zivotinje", "biljke", "mora", "predmeti"];
+    Niz = ["username", "drzava", "gradovi", "jezera", "planine", "reke", "zivotinje", "biljke", "mora", "predmeti"];
 
     crtaj(rod) {
 
@@ -35,39 +35,31 @@ export class Odgovori {
 
         this.Niz.forEach((element, index) => {
 
-                const polja = document.createElement("div");
-                polja.className = element;
-                polja.id = "polje";
-                pregled_Odgovora.appendChild(polja);
+            const polja = document.createElement("div");
+            polja.className = element;
+            polja.id = "polje";
+            pregled_Odgovora.appendChild(polja);
 
-                const labela = document.createElement("label");
-                labela.innerHTML = element;
-                polja.appendChild(labela);
-
-
-
-                const odgovori_igraca = document.createElement("div");
-                odgovori_igraca.className = element;
-                odgovori_igraca.style.opacity = 1;
-                odgovori_igraca.innerHTML = "";
-
-                polja.appendChild(odgovori_igraca);
-
-            }
-
-        )
+            const labela = document.createElement("label");
+            labela.innerHTML = element;
+            polja.appendChild(labela);
 
 
 
+            const odgovori_igraca = document.createElement("div");
+            odgovori_igraca.className = element;
+            odgovori_igraca.style.opacity = 1;
+            odgovori_igraca.innerHTML = "";
 
+            polja.appendChild(odgovori_igraca);
 
-
+        })
     }
 
 
 
 
-    napraviRed(username,drzava, gradovi, jezera, planine, reke, zivotinje, biljke, mora, predmeti) {
+    napraviRed(username, drzava, gradovi, jezera, planine, reke, zivotinje, biljke, mora, predmeti) {
 
 
         var username_div = this.mini_kontejner.querySelector(".username");
@@ -91,9 +83,9 @@ export class Odgovori {
         var m = this.mini_kontejner.querySelector(".mora");
         var pr = this.mini_kontejner.querySelector(".predmeti");
 
-        const div0=document.createElement('div')
-        div.className="div"
-        div.innerHTML=username;
+        const div0 = document.createElement('div')
+        div.className = "div"
+        div.innerHTML = username;
         username_div.appendChild(div0)
 
 

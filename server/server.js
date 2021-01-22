@@ -2,13 +2,16 @@ const http = require('http')
 const express = require('express')
 const socketio = require('socket.io')
 const redis = require('redis')
+const createRound = require('./create-round')
 const {
     promisify
 } = require("util");
 const {
     stringify
 } = require('querystring');
-const { count } = require('console');
+const {
+    count
+} = require('console');
 
 
 const REDIS_PORT = 6379;
@@ -36,10 +39,17 @@ io.on('connection', (sock) => {
     sock.on('start', ({
         username,
         key
-    }) => startRound(username, key))
+    }) => startRoundP(username, key))
 
-    sock.on('join', ({ username, key }) => joinRoundP(username, key))
-    sock.on('submitAnswers', ({ answers: answers, username: username, key: key }) => submitAnswersS(answers, username, key))
+    sock.on('join', ({
+        username,
+        key
+    }) => joinRoundP(username, key))
+    sock.on('submitAnswers', ({
+        answers: answers,
+        username: username,
+        key: key
+    }) => submitAnswersS(answers, username, key))
 })
 
 const submitAnswersS = (answers, username, key) => {
@@ -52,14 +62,17 @@ const submitAnswersS = (answers, username, key) => {
     }
 }
 
-const startRound = async (username, key) => {
-    console.log('key', key)
+const startRoundP = async (username, key) => {
+    console.log('started !')
     const game = games.get(key)
     if (!game) return; //io.emit(`noexist:${key}`,`game ${key} doesnt exist` );
     else {
+        console.log('started2')
         if (!game.isAdmin(username)) return;
+        io.emit(`gameStart:${key}`, { time: game.G })
         const res = await game.startRound()
-        sock.emit(`results:${key}`, {
+        await console.log('counting down!')
+        await io.emit(`results:${key}`, {
             results: res
         })
     }
@@ -129,116 +142,13 @@ server.on('error', () => {
     console.error('err')
 })
 
-const createRound = (time, answers, n, l) => {
-    let start = false
-    let letter = l
-    let numPlayers = n;
-    var players = []
-    var fields = ['drzava', 'grad', 'jezero', 'planina', 'reka', 'zivotnija', 'biljka', 'more', 'predmet']
-    var answers = [...answers]
-
-    const getLetter = () => letter;
-    const getPlayers = () => players;
-    const getNumPlayers = () => numPlayers;
-    const addAdmin = (name) => {
-        players.push({
-            name: name,
-            admin: true,
-            points: 0
-        })
-    }
-    const addPlayer = (name) => {
-        if (players.length === numPlayers || players.filter(p => p.name === name).length > 0) return
-        players.push({
-            name: name,
-            admin: false,
-            points: 0
-        })
-    }
-    const isAdmin = (name) => {
-        if (player.find(p => p.name === name).admin) return true
-        return false
-    }
-    const submitAnswers = (name, answers) => {
-        if (!start) return
-        console.log('start', start)
-        let p = players.find(p => p.name === name)
-        answers.forEach((ans, ind) => p[`${fields[ind]}`] = ans)
-    }
-
-    const printAnswers = (name) => {
-        console.log(players.find(p => p.name === name))
-    }
-
-    const calculateCategory = (answers, field) => {
-        let collectedAnswers = []
-        console.log('answers', answers)
-        players.forEach(player => {
-            answers.forEach(a => {
-                if (player[`${field}`].toLowerCase() === a) {
-                    const playerAnswerArray = collectedAnswers.filter(c => c.answer === a)
-                    if (playerAnswerArray.length > 0) {
-                        let p;
-                        let pOduzimanje;
-                        switch (playerAnswerArray.length) {
-                            case 1:
-                                p = 3
-                                pOduzimanje = 2
-                                break;
-                            case 2:
-                                p = 2
-                                pOduzimanje = 1
-                                break;
-                            default:
-                                p = 1
-                                pOduzimanje = 1
-                                break;
-                        }
-                        player.points += p
-                        playerAnswerArray.forEach(p => {
-                            p.player.points -= pOduzimanje
-                        });
-                    } else {
-                        player.points += 5
-                    }
-                    collectedAnswers.push({
-                        answer: a,
-                        player: player
-                    })
-                }
-            })
-        })
-    }
-
-    const calculateResults = () => {
-        answers.forEach((ansCategory, ind) => {
-            calculateCategory(ansCategory, fields[ind])
-        })
-        return players
-    }
-
-    const startRound = async () => {
-        start = true
-        await setTimeout(calculateResults, time + 1000);
-        return await players
-    }
 
 
-
-    return {
-        getNumPlayers,
-        isAdmin,
-        getLetter,
-        getPlayers,
-        addPlayer,
-        addAdmin,
-        submitAnswers,
-        printAnswers,
-        calculateResults,
-        startRound
-    }
-}
-
+// const c = createRound(20, [
+//     ['a'],
+//     ['b', 'f'],
+//     ['c', 'd']
+// ], 20, 1)
 // const start = async () => {
 //     const f = await c.startRound()
 //     await console.log('f', f)

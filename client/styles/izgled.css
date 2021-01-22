@@ -1,139 +1,133 @@
-.pregled_Odgovora
-{
+.pregled_Odgovora {
     border: 1px black solid;
     height: 19px;
     display: flex;
     flex-direction: row;
     width: 800px;
-    
+
 }
 
 
-#polje
-{
-    
-  
+#polje {
+
+
     height: 299px;
-    width:200px
+    width: 200px
 }
 
-.mini 
-{
+.table-responsive {
+    width: 1000px;
+}
+
+.mini {
     display: flex;
-   margin-top: 30px;
+    margin-top: 30px;
     border: 1px black solid;
- 
+
     width: 800px;
 }
 
-.odgovori_igraca 
-{
+.odgovori_igraca {
     margin-left: 5px;
     height: 30px;
     border: 0.5px rgb(160, 155, 155) solid;
 
 }
 
-.dugme_ready 
-{
+.dugme_ready {
     margin-top: 10px;
     border-radius: 2rem;
 }
-.dugme_prijava_za_igru
-{
-    
+
+.dugme_prijava_za_igru {
+
     width: 200px;
     height: 20px;
     border-radius: 20px;
 }
-.div_username
-{
+
+.div_username {
     margin-top: 50px;
     align-items: center;
 }
 
-.mini_kontejner
-{
+.mini_kontejner {
     margin-top: 300px;
     flex-direction: row;
     display: flex;
-    
+
     height: 350px;
     width: 300px;
     background-color: rgb(33, 168, 231);
 }
 
-.desni_kontejner 
-{
-  height: 350px;
-   width: 300px;
+.desni_kontejner {
+    height: 350px;
+    width: 300px;
 }
-.donji_kontejner
-{ 
-    
+
+.donji_kontejner {
+
     display: flex;
-    margin:1%;
+    margin: 1%;
     height: 300px;
     width: 805px;
     display: flex;
     flex-direction: column;
     height: 290px;
-  
-   
+
+
 }
 
-.unos
-{
+.unos {
     height: 20px;
     width: 50px;
     margin-left: 100px;
 }
-.dugme_start
-{
+
+.dugme_start {
     height: 25px;
     width: 70px;
     border-radius: 2rem;
 }
-.join 
-{
+
+.join {
 
     height: 50px;
     width: 70px;
     border-radius: 2rem;
-    
+
 }
-.labela_status
-{
+
+.labela_status {
     margin-top: 200px;
     margin-left: 300px;
 }
 
-.labela_poeni
-{
+.labela_poeni {
     margin-left: 15px;
 }
-.div_red
-{
-    
+
+.div_red {
+
     display: flex;
     flex-direction: row;
     border: 1px black solid;
     height: 15px;
 }
-.div_statistika
-{
+
+.div_statistika {
     display: flex;
     flex-direction: column;
-     margin-left: 500px;
-   
+    margin-left: 500px;
+
     border: 1px black solid;
     height: 150px;
     width: 600px;
-   
+
 }
 
-.div_forma_join
-{
+.div_forma_join {
     margin-top: 150px;
     border: 1px black solid;
     height: 200px;
@@ -141,30 +135,27 @@
     width: 300px;
     align-items: center;
 }
-.kontejner 
-{
-    
+
+.kontejner {
+
     border: 1px black solid;
-    height:440px;
+    height: 440px;
     width: 400px;
     margin-top: 10px;
 }
 
 
-.red1
-{
+.red1 {
     margin-left: 1px;
 
 }
 
-.input
-{
+.input {
     margin-left: 10px;
 
 }
 
-.div 
-{
+.div {
     border: 1px black solid;
     height: 19px;
 }
