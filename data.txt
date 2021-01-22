@@ -1,0 +1,259 @@
+rpush drzave:1 Afganistan Albanija Alžir Andora Angvila "Antigva i Barbuda" Argentina Australija Austrija Azerbejdžan
+rpush drzave:2 Bahami Bahrein Bangladeš Barbados Belgija Belize Belorusija Benin Bermuda Bolivija Bocvana "Bosna i Hercegovina" Brazil Brunej Bugarska "Burkina Faso" Burundi Butan
+rpush drzave:3 "Centralnoafrička Republika" "Crna Gora"
+rpush drzave:4 Čad Češka Čile
+rpush drzave:6 Danska Dominika "Dominikanska Republika"
+rpush drzave:7 Džibuti
+rpush drzave:9 Ekvador Egipat "Ekvatorijalna Gvineja" Eritreja Estonija Etiopija "El Salvador"
+rpush drzave:10 "Folklandska ostrva" "Farska ostrva" Fidži Filipini Finska Francuska
+rpush drzave:11 Gabon Gambija Gana Gibraltar Grčka Grenada Grenland Gruzija Gvatemala Gvajana Gvineja "Gvineja Bisao"
+rpush drzave:12 Haiti Honduras Holandija Hrvatska 
+rpush drzave:13 Indija Indonezija Irak Iran Irska Island Italija Izrael
+rpush drzave:14 Jamajka Japan Jemen Jermenija Jordan "Južna Afrika"
+rpush drzave:15 Kambodža Kamerun Kanada "Kajmanska ostrva" Katar Kazahstan Kenija Kina Kipar Kirgistan Kolumbija Kongo Kostarika Kuba Kuvajt
+rpush drzave:16 Laos Litvanija Lesoto Liban Liberija Libija Lihtenštajn Letonija Luksemburg
+rpush drzave:18 Madagaskar Mađarska Makedonija Malavi Maldivi Malezija Mali Malta Maroko "Maršalska ostrva" Mauricijus Mauritanija Meksiko Mjanmar Mikronezija Moldavija Monako Mongolija Mozambik
+rpush drzave:19 Namibija Nemačka Nikaragva Niger Nigerija Norveška "Novi Zeland"
+rpush drzave:21 "Obala Slonovače" Oman
+rpush drzave:22 Pakistan Panama "Papau Nova Gvineja" Paragvaj Peru Poljska Portugal Portoriko
+rpush drzave:23 Rumunija Rusija Ruanda
+rpush drzave:24 Salvador Samoa "San Marino" "Saudijska Arabija" Sejšeli Senegal "Severna Koreja" "Sijera Leone" Singapur Sirija "Sjedinjene Američke Države" Slovačka Slovenija "Solomonska ostrva" Somalija Srbija Sudan Surinam Svazilend "Sveti Toma i Princip" "Sveti Vincent i Grenadini"
+rpush drzave:25 Španija "Šri Lanka" Švedska Švajcarska
+rpush drzave:26 Tadžikistan Tajland Tanzanija Togo Tonga "Trinidad i Tobago" Tunis Turska Turkmenistan
+rpush drzave:27 Uganda Ukrajina "Ujedinjeni Arapski Emirati" "Ujedinjeno Kraljevstvo" Urugvaj Uzbekistan
+rpush drzave:28 Vanuatu Vatikan Venezuela Vijetnam
+rpush drzave:29 Zambija Zimbabve
+rpush biljke:1 Ariš Artičoka Avokado Ananas
+rpush biljke:2 Bagrem Banana Brokoli Bob
+rpush biljke:3 Celer Cvekla Cikorija
+rpush biljke:4 Čempres Čičak Čia
+rpush biljke:5 Ćurika
+rpush biljke:6 Dinja Dud Dunja Dren
+rpush biljke:7 Dženarika
+rpush biljke:8 Đumbir Đurđevak
+rpush biljke:9 Eukaliptus Eva Estragon
+rpush biljke:10 Fikus Forzicija
+rpush biljke:11 Glog Godži Grab Grožđe
+rpush biljke:12 Hmelj Heljda Hrast
+rpush biljke:13 Imela Iva
+rpush biljke:14 Jabuka Javor Jagoda Jarebika
+rpush biljke:15 Kivi Kruška Kelj Keleraba
+rpush biljke:16 Lipa Limun Lešnik Lubenica
+rpush biljke:17 Ljutić Ljiljan Ljupčac
+rpush biljke:18 Maslina Mango Mušmula Malina
+rpush biljke:19 Nar Nektarina Narandža
+rpush biljke:21 Orah Oskoruša Ogrozd
+rpush biljke:22 Papaja Pelin Paprika Paradajz
+rpush biljke:23 Repa Rotkva Ruzmarin Rogač
+rpush biljke:24 Spanać Smokva Soja Suncokret
+rpush biljke:25 Šafran Šipak Šljiva Šargarepa
+rpush biljke:26 Trešnja Tisa Tikvica
+rpush biljke:27 Uva Urma
+rpush biljke:28 Višnja Vrba Vanila
+rpush biljke:29 Zelje Zova Zlatica
+rpush biljke:30 Ždraljevina Žalfija
+rpush planine:1 Avala Ararat Atos
+rpush planine:2 Beljanica Bjelolasica Bjelašnica
+rpush planine:3 Cer "Crni vrh" Crvanj Cincar
+rpush planine:4 Čemerno Čemernik Čabulja Čvrsnica
+rpush planine:5 Ćićarija
+rpush planine:6 Dinara Durmitor Dukat Dimitor
+rpush planine:7 "Džepska planina"
+rpush planine:8 "Đedinska planina"
+rpush planine:9 Elgon
+rpush planine:10 Fudži "Fruška gora"
+rpush planine:11 Grmeč Goč Golija Golak Goljak
+rpush planine:12 Hrgud Hajla Hum
+rpush planine:13 Igman Ida "Ivan planina" Ivanščica
+rpush planine:14 Jastrebac Juhor Jelica Jagodnja
+rpush planine:15 Kosmaj Kopaonik Kukavica Kozara
+rpush planine:16 Lovćen Leotar Lučevik
+rpush planina:17 Ljubišnja Ljubuša Ljubić
+rpush planine:18 Maljen Mučanj Maglić
+rpush planine:19 Nidže Nanos Ninaja
+rpush planine:20 Njegoš
+rpush planine:21 Olimp Ozren Orjen
+rpush planine:22 Povlen Paštrik Pobijenik
+rpush planine:23 Radan Rogozna Rtanj Rujen
+rpush planine:24 Stolovi "Suva planina" "Stara planina" Seličevica
+rpush planine:25 Šator Šomrda Šar-planina
+rpush planine:26 Tara Tavor Tresibaba Tupižnica
+rpush planine:27 Učka Uzlomac
+rpush planine:28 Vlašić Vitorog Vodno
+rpush planine:29 Zlatar Zlatibor Zelengora
+rpush planine:30 Žljeb Željin
+rpush gradovi:1 Akra Aman Alžir Aranđelovac
+rpush gradovi:2 Beograd Bankok Baku Bejrut
+rpush gradovi:3 Cirih Cetinje Celje
+rpush gradovi:4 Čačak Čikago Černobilj
+rpush gradovi:5 Ćuprija
+rpush gradovi:6 Dubrovnik Doboj Daka Dablin Dakar
+rpush gradovi:7 Džakarta Džeda Džordžtaun
+rpush gradovi:8 Đakovica Đenova Đer
+rpush gradovi:9 Elbasan Evora Empoli Elce
+rpush gradovi:10 Foča Firenca Fatima Fes
+rpush gradovi:11 Grozni Gaborone Gabala Gnjilane
+rpush gradovi:12 Hvar Hag Hamburg Homs
+rpush gradovi:13 Islamabad Inđija Ivanec Ipsvič
+rpush gradovi:14 Jerevan Jerusalim Jagodina Jajce
+rpush gradovi:15 Kraljevo Kairo Kruševac Koprivnica
+rpush gradovi:16 Lima London Leskovac Lisabon
+rpush gradovi:17 Ljubljana
+rpush gradovi:18 Madrid Maputo Metković Mostar
+rpush gradovi:19 Niš Najrobi Negotin Nasau
+rpush gradovi:20 "Nju Delhi" Njujork
+rpush gradovi:21 Oslo Otava Obrenovac
+rpush gradovi:22 Paraćin Pančevo Priština Prokuplje
+rpush gradovi:23 Riga Rim Ruma Rijeka
+rpush gradovi:24 Sisak Sombor Sarajevo Sana
+rpush gradovi:25 Šabac Šid Šangaj
+rpush gradovi:26 Tirana Tunis Tokio Tripoli
+rpush gradovi:27 Užice "Ulan Bator"
+rpush gradovi:28 Valjevo Vaduc Valeta Varšava
+rpush gradovi:29 Zrenjanin Zaječar Zadar Zagreb
+rpush gradovi:30 Ženeva Žepče
+rpush reke:1 Amazon Amur Adrov Adra
+rpush reke:2 Bojana Bosna Bru Bodva
+rpush reke:3 Crnica Cetina Cernica
+rpush reke:4 Čikola Čemernica Čik Čabranka
+rpush reke:5 Ćehotina
+rpush reke:6 Dunav Drina Drava Dadu
+rpush reke:7 Džuba Džeferson Džoraget
+rpush reke:8 Đetinja
+rpush reke:9 Ebro Erenik Eurota Evel
+rpush reke:10 Fulda "Fojnička reka" Fekete-Kereš
+rpush reke:11 Gang Grza Gradac Glina
+rpush reke:12 Hadson Hoangho Hornad
+rpush reke:13 Ibar Ind Ilova
+rpush reke:14 Jadova Jadro Jordan Jadar
+rpush reke:15 Krka Kongo Kolubara Krupa
+rpush reke:16 Lim Lepenica Lika Lonja
+rpush reke:17 Ljuboviđa Ljig Ljubljanica
+rpush reke:18 Mlava Misisipi Mekong Morača
+rpush reke:19 Nera Neretva Nerodinka Nadiža
+rpush reke:20 Njemen Njasluha
+rpush reke:21 Ob Odra Orinoko Ohajo
+rpush reke:22 Pek Piva Pčinja Plitvica
+rpush reke:23 Rajna Rzav Resava Radika
+rpush reke:24 Sava Sena Sitnica Studva
+rpush reke:25 Šelda Špreja Štira Šujica
+rpush reke:26 Tigar Tamiš Tara Temza
+rpush reke:27 Ub Una Uvac
+rpush reke:28 Visla Volga Veternica Vltava
+rpush reke:29 Zambezi Zlatica Zeta Zmrnja
+rpush reke:30 Ždraljica Željeznica
+rpush mora:1 "Alboransko more" "Argentinsko more" "Azovsko more" "Andamansko more" "Amundsenovo more" "Arafursko more"
+rpush mora:2 "Barencovo more" "Beaufortovo more" "Belo more" "Boforovo more" "Balearsko more" "Baltičko more" "Botnijsko more" "Boforovo more" "Balijsko more" "Bandsko more" "Beringovo more" "Bizmarkovo more" "Bohajsko more" "Boholsko more" "Belingshausenovo more"
+rpush mora:3 "Crno more" "Crveno more" "Celebesko more"
+rpush mora:4 "Čukotsko more" "Čileansko more"
+rpush mora:6 "Dejvisovo more" "Dirvilovo more"
+rpush mora:9 "Egejsko more"
+rpush mora:10 "Florensko more"
+rpush mora:11 "Grenlandsko more" 
+rpush mora:12 "Halmahersko more"
+rpush mora:13 "Istočnosibirsko more" "Irmingerovo more" "Irsko more" "Istočno kinesko more"
+rpush mora:14 "Jadransko more" "Jonsko more" "Javansko more" "Japansko more" "Južno kinesko more"
+rpush mora:15 "Karsko more" "Karipsko more" "Keltsko more" "Kritsko more" "Kamotesko more" "Koralno more" "Korsko more" "Kosmonautsko more" "More kralja Hokona VII"
+rpush mora:16 "Laptevsko more" "Linkolnovo more" "Labradorsko more" "Levantsko more" "Libijsko more" "Ligurijsko more" "Lakadivsko more" "Lazarevljevo more"
+rpush mora:18 "Mirtilovo more" "Mramorno more" "Molučko more" "Mosonovo more"
+rpush mora:19 "Norveško more"
+rpush mora:21 "Olandsko more" "Ohotsko more" 
+rpush mora:22 "Pečorsko more"
+rpush mora:23 "Riser Larsenovo more" "Rosovo more"
+rpush mora:24 "Sargaško more" "Severno more" "Savusko more" "Sališko more" "Seramsko more" "Sibujansko more" "Solomonovo more" "Sulusko more" "Somovljevo more" "More saradnje" "More Skoša"
+rpush mora:25 "Škotsko more"
+rpush mora:26 "Tirensko more" "Trakijsko more" "Timorsko more" "Tasmanovo more"
+rpush mora:27 "Unutrašnje japansko more"
+rpush mora:28 "Vandelsovo more" "Visajansko more" "Vedelovo more"
+rpush mora:29 "Zapadno more"
+rpush mora:30 "Žuto more"
+rpush zivotinje:1 Antilopa Ajkula Ara Albatros
+rpush zivotinje:2 Bizon Bivo Babun Boa
+rpush zivotinje:3 Cvrčak Cipal Carić
+rpush zivotinje:4 Čikov Činčila Čavka Čaplja
+rpush zivotinje:5 Ćurka Ćuk
+rpush zivotinje:6 Deverika Detlić Drozd Dabar
+rpush zivotinje:7 "Džeksonov kameleon" "Džofrijev ocelot"
+rpush zivotinje:8 "Đavolja raža" "Đavolji zubošaranaš"
+rpush zivotinje:9 Emu Eja
+rpush zivotinje:10 Flamingo Fugu Fratar Foka
+rpush zivotinje:11 Galeb Gavran Grgeč Grdoba
+rpush zivotinje:12 Haringa Harpija Hrčak Hijena
+rpush zivotinje:13 Irvas Ibis Iverak
+rpush zivotinje:14 Jazavac Jegulja Jež Jesetra
+rpush zivotinje:15 Klen Karaš Kolibri Kuna
+rpush zivotinje:16 Lav Lemur Lasta Losos
+rpush zivotinje:17 Ljiljak
+rpush zivotinje:18 Medved Muflon Makaki Moruna
+rpush zivotinje:19 Noj Nosorog Nutrija
+rpush zivotinje:20 Njorka
+rpush zivotinje:21 Oslić Orao Okapi
+rpush zivotinje:22 Puma Panda Pauk Prepelica
+rpush zivotinje:23 Rak Roda Raža Ris
+rpush zivotinje:24 Som Smuđ Sova Soko
+rpush zivotinje:25 Ševa Šljuka Šaran Šakal
+rpush zivotinje:26 Tigar Tvor Tuna Tetreb
+rpush zivotinje:27 Uholaže Ulješara Utva
+rpush zivotinje:28 Veverica Valabi Varan Vaška
+rpush zivotinje:29 Zebra Zeba Zec
+rpush zivotinje:30 Ždral Žaba Žderavac
+rpush jezera:1 "Albertovo jezero" "Abaja jezero" "Aralsko jezero" "Aštamudi jezero"
+rpush jezera:2 "Belo jezero" Borovnik "Bilećko jezero" "Bodensko jezero"
+rpush jezera:3 "Crno jezero" "Crveno jezero" "Cerkniško jezero"
+rpush jezera:4 Čiče "Čonopljansko jezero" Čad
+rpush jezera:5 Ćelije
+rpush jezera:4 "Dubravsko jezero" "Dojransko jezero"
+rpush jezera:7 "Džordžovo jezero"
+rpush jezera:8 Đola "Đerdapsko jezero"
+rpush jezera:5 Ejr Elsvort
+rpush jezera:6 Fitri
+rpush jezera:7 Gazivode Gruža "Goričko jezero" "Gronje jezero"
+rpush jezera:8 Hjuron Hazna
+rpush jezera:9 Iri Inari Itaska
+rpush jezera:10 "Jablaničko jezero" "Jugovo jezero" Jarun "Jovačko jezero"
+rpush jezera:11 Komo Karačaj Kerkini
+rpush jezera:12 Ladogo Lugano Lugu
+rpush jezera:17 Ljukovo
+rpush jezera:13 Malavi Mičigen Madjore
+rpush jezera:14 Nemi "Nezidersko jezero" Narač
+rpush jezera:20 Njasa
+rpush jezera:21 Onjega Ontario "Oblacinsko jezero"
+rpush jezera:22 Perućac "Palićko jezero" Paljuvi
+rpush jezera:23 Rusanda "Rabrovačko jezero" Retba
+rpush jezera:24 "Skadarsko jezero" "Sjeničko jezero" "Srebrno jezero"
+rpush jezera:25 "Šumaričko jezero" "Šatorsko jezero" "Štirinsko jezero"
+rpush jezera:26 Tuz Tanganjika Turkana
+rpush jezera:27 "Uvačko jezero" Urmija
+rpush jezera:28 "Viktorijino jezero" Van "Vlasinsko jezero"
+rpush jezera:29 "Zaovinsko jezero" "Zlatarsko jezero"
+rpush jezera:30 "Ženevsko jezero" "Žovneško jezero"
+rpush predmeti:1 Avan Ašov Antena
+rpush predmeti:2 Bušilica Brijač Bubanj
+rpush predmeti:3 Cigla Cipela Cucla Ceger
+rpush predmeti:4 Čuk Česma Čarapa
+rpush predmeti:5 Ćup
+rpush predmeti:4 Daska Dubak Disk "Daljinski upravljač" 
+rpush predmeti:7 Džemper Džak Džezva
+rpush predmeti:8 Đubrovnik
+rpush predmeti:5 Ekser Epruveta Ekran
+rpush predmeti:6 Flaša Futrola Frizbi
+rpush predmeti:7 Gusle Gajde Greda Gramofon
+rpush predmeti:8 Harpun Hartija Harfa
+rpush predmeti:9 Igla Igračka Ikona Imenik
+rpush predmeti:10 Jakna Jarbol Jastuk
+rpush predmeti:11 Kabanica Kaiš Kajak Kalkulator
+rpush predmeti:12 Lampa Lavabo Lonac Lopta
+rpush predmeti:17 Ljuljaška
+rpush predmeti:13 Mač Metla Megafon Motor
+rpush predmeti:14 Naočare Nož Nosila Novine
+rpush predmeti:20 Njihalica
+rpush predmeti:21 Obruč Ogledalo Odvrtač Orman
+rpush predmeti:22 Parket Papir Patron Perika
+rpush predmeti:23 Radijator Radio Revolver Rukavica
+rpush predmeti:24 Sablja Strela Suknja Sat Suncobran
+rpush predmeti:25 Šal Šaržer Šešir Štake
+rpush predmeti:26 Tabla Tanjir Telefon Točak Traktor
+rpush predmeti:27 Upaljač Utikač Uzde Uže
+rpush predmeti:28 Vaza Vadičep Viljuška
+rpush predmeti:29 Zatvarač Zavesa Zlatnik
+rpush predmeti:30 Žarač Žeton Žilet
