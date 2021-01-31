@@ -47,8 +47,7 @@ const createRound = (time, n, l) => {
             p.answers.ans[i] = ans
             ++i
         }
-        //nswers.forEach((ans, ind) => { p.answers[ind][0] = 1; console.log('p.answers[ind][0]', p.answers[ind][0]) })
-        console.log('p', p)
+        return p;
     }
 
     const printAnswers = (name) => {

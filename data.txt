@@ -4,17 +4,6 @@ rpush planine:1 Avala Ararat Atos
 rpush gradovi:1 Akra Aman Alžir Aranđelovac
 rpush reke:1 Amazon Amur Adrov Adra
 
-
-
-
-
-
-
-
-
-
-
-
 rpush drzave:2 Bahami Bahrein Bangladeš Barbados Belgija Belize Belorusija Benin Bermuda Bolivija Bocvana "Bosna i Hercegovina" Brazil Brunej Bugarska "Burkina Faso" Burundi Butan
 rpush biljke:2 Bagrem Banana Brokoli Bob
 rpush planine:2 Beljanica Bjelolasica Bjelašnica

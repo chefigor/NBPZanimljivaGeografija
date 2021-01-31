@@ -24,6 +24,8 @@ const client = redis.createClient(REDIS_PORT)
 const server = http.createServer(app)
 const io = socketio(server)
 const lrangeAsync = promisify(client.lrange).bind(client);
+const getAsync = promisify(client.get).bind(client);
+const hgetAsync = promisify(client.hget).bind(client)
 
 let games = new Map()
 
@@ -52,6 +54,16 @@ io.on('connection', (sock) => {
     }) => submitAnswersS(answers, username, key))
 })
 
+function makeid(length) {
+    var result = '';
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
+
 const submitAnswersS = (answers, username, key) => {
     const game = games.get(key)
     console.log('username', username)
@@ -60,7 +72,8 @@ const submitAnswersS = (answers, username, key) => {
     if (!game) return; //io.emit(`noexist:${key}`,`game ${key} doesnt exist` );
     else {
         console.log('answers', answers)
-        game.submitAnswers(username, answers);
+        const p = game.submitAnswers(username, answers);
+        client.set(`game:${key}:${p.name}`, p.answers.ans)
         // io.emit(`answersSubmited:${key}`,)
         //sock.emit('answersSubmited')
     }
@@ -123,6 +136,8 @@ const createRoundP = async (username, numPlayers, time, k) => {
 
         const c = createRound(time, numPlayers, slovo)
         c.addAdmin(username)
+        client.hmset(`game:${key}`, { numPlayers: numPlayers, time: time })
+
         games.set(key, c)
         io.emit(`playerJoined:${key}`, {
             players: c.getPlayers(),
